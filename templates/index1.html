@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Segmentation</h1>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label for="recency">Recency (Days):</label>
+            <input type="text" id="recency" name="recency" required>
+
+            <label for="monetary">Monetary Value ($):</label>
+            <input type="text" id="monetary" name="monetary" required>
+
+            <label for="frequency">Frequency (Number of Transactions):</label>
+            <input type="text" id="frequency" name="frequency" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

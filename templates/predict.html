@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="dynamic-island"> <!-- Dynamic island container -->
+            <ul class="navbar">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Customer Segmentation Prediction</h1>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <label for="recency">Recency (Days):</label>
+            <input type="text" id="recency" name="recency" required>
+
+            <label for="monetary">Monetary Value ($):</label>
+            <input type="text" id="monetary" name="monetary" required>
+
+            <label for="frequency">Frequency (Number of Transactions):</label>
+            <input type="text" id="frequency" name="frequency" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

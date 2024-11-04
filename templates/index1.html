@@ -9,18 +9,23 @@
 <body>
     <div class="container">
         <h1>Customer Segmentation</h1>
-        <form action="{{ url_for('predict') }}" method="POST">
-            <label for="recency">Recency (Days):</label>
-            <input type="text" id="recency" name="recency" required>
+        
+        {% if session['user_id'] %}
+            <form action="{{ url_for('predict') }}" method="POST">
+                <label for="recency">Recency (Days):</label>
+                <input type="text" id="recency" name="recency" required>
 
-            <label for="monetary">Monetary Value ($):</label>
-            <input type="text" id="monetary" name="monetary" required>
+                <label for="monetary">Monetary Value ($):</label>
+                <input type="text" id="monetary" name="monetary" required>
 
-            <label for="frequency">Frequency (Number of Transactions):</label>
-            <input type="text" id="frequency" name="frequency" required>
+                <label for="frequency">Frequency (Number of Transactions):</label>
+                <input type="text" id="frequency" name="frequency" required>
 
-            <button type="submit">Predict</button>
-        </form>
+                <button type="submit">Predict</button>
+            </form>
+        {% else %}
+            <p>Please <a href="{{ url_for('signin') }}">sign in</a> or <a href="{{ url_for('signup') }}">sign up</a> to make predictions.</p>
+        {% endif %}
     </div>
 </body>
 </html>

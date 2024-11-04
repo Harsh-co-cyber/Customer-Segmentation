@@ -8,11 +8,10 @@
 </head>
 <body>
     <div class="container">
-        
-            <h1>Cluster Prediction Result</h1>
-            <p>Your data has been assigned to Cluster: {{ cluster }}</p>
-            <p>{{ description }}</p>
-            <a href="{{ url_for('index1') }}">Make another prediction</a>
+        <h1>Prediction Result</h1>
+        <p>{{ description }}</p>
+        <p>Cluster: {{ cluster }}</p>
+        <a href="{{ url_for('predict') }}">Make another prediction</a>
     </div>
 </body>
 </html>

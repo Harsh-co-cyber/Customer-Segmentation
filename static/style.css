@@ -1,3 +1,4 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -5,21 +6,117 @@ body {
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Navbar styles */
+nav {
+    position: fixed; /* Fixes the navbar to the top */
+    top: 0;
+    width: 100%; /* Stretches navbar across the width of the page */
+    background-color: #007bff; /* Blue background color */
+    padding: 10px 0; /* Padding for spacing */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
+.dynamic-island {
+    background-color: #007bff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: transform 0.3s;
+}
+
+.dynamic-island:hover {
+    transform: scale(1.05);
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffd700;
+}
+
+/* Container Styling */
+.container {
+    width: 90%; /* Increased width for better responsiveness */
+    max-width: 800px;
+    margin: 50px auto; /* Adjusted margin to center the container */
+    padding: 30px; /* Increased padding for a more spacious feel */
+    background: #fff;
+    border-radius: 12px; /* Slightly larger border radius */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    padding-top: 80px; /* Adds space to offset the navbar height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center-align text for better readability */
+}
+
+/* Heading Styling */
 h1 {
     margin-bottom: 20px;
-    text-align: center;
+    color: #333; /* Darker color for better readability */
 }
 
+/* About Sections Styling */
+.about-section {
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.about-section h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    color: #555; /* Slightly lighter color for better contrast */
+}
+
+/* Team Section Styling */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between team members */
+    justify-content: center;
+}
+
+.team-member {
+    text-align: center;
+    width: 150px; /* Fixed width for team member cards */
+}
+
+.team-photo {
+    width: 100%; /* Full width for team photos */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Round photos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin-bottom: 10px; /* Space below the photo */
+}
+
+.team-member h3 {
+    color: #333; /* Dark color for names */
+    font-size: 1.2em; /* Increase font size for names */
+    margin-bottom: 5px; /* Space below names */
+}
+
+/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
@@ -28,38 +125,67 @@ form {
 label {
     margin-bottom: 5px;
     font-weight: bold;
+    color: #555; /* Slightly lighter color for labels */
 }
 
 input[type="text"] {
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 12px; /* Increased padding for better usability */
     font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #ccc; /* Lighter border for inputs */
+    border-radius: 6px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth transition for border color */
 }
 
+input[type="text"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styling */
 button {
-    padding: 10px;
+    padding: 12px; /* Increased padding for buttons */
     font-size: 16px;
     color: #fff;
     background-color: #007bff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px; /* Rounded corners */
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slightly lift button on hover */
 }
 
+/* Link Styling */
 a {
     display: block;
-    margin-top: 20px;
+    margin-top: 10px; /* Increased margin for spacing */
     text-align: center;
     color: #007bff;
     text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
 }
 
 a:hover {
     text-decoration: underline;
+    color: #0056b3; /* Darker color on hover */
+}
+
+/* Styling for the button */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Adjust color as needed */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }

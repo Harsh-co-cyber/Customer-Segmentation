@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Customer Segmentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="dynamic-island">
+            <ul class="navbar">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>About Us</h1>
+        
+        <!-- Our Mission Section -->
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <p>We aim to develop solutions that provide insightful segmentation of customers, helping businesses understand their audience better and make data-driven decisions.</p>
+        </section>
+        
+        <!-- Our Story Section -->
+        <section class="about-section">
+            <h2>Our Story</h2>
+            <p>We are a group of third-year engineering students who embarked on this project under the guidance of Dr. K. Hajarathaiah. This project is a testament to our dedication to learning and applying data analytics to real-world problems.</p>
+        </section>
+        
+        <!-- Meet the Team Section -->
+        <section class="about-section">
+            <h2>Meet the Team</h2>
+            <div class="team-container">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='/workspaces/Customer-Segmentation/static/images/WhatsApp Image 2024-11-04 at 12.06.50_a7422911.jpg') }}" alt="Harsh Pahariya's Photo" class="team-photo">
+                    <h3>Harsh Pahariya</h3>
+                    <p>Registration No: 22BCE9130</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='/workspaces/Customer-Segmentation/images/WhatsApp Image 2023-09-01 at 19.09.50.jpg') }}" alt="Aadya Nair's Photo" class="team-photo">
+                    <h3>Aadya Nair</h3>
+                    <p>Registration No: 22BCE9180</p>
+                </div>
+
+                <!-- Placeholder for other members -->
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/member3.jpg') }}" alt="Member 3's Photo" class="team-photo">
+                    <h3>G.V. Sathwik</h3>
+                    <p>Registration No: 22BCE9174</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/member4.jpg') }}" alt="Member 4's Photo" class="team-photo">
+                    <h3>Tilak Reddy</h3>
+                    <p>Registration No: 22BCE8959</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='images/member5.jpg') }}" alt="Member 5's Photo" class="team-photo">
+                    <h3>Member 5</h3>
+                    <p>Registration No: 22BCEXXXX</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

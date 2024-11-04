@@ -8,13 +8,13 @@ body {
 
 /* Navbar styles */
 nav {
-    position: fixed; /* Fixes the navbar to the top */
+    position: fixed;
     top: 0;
-    width: 100%; /* Stretches navbar across the width of the page */
-    background-color: #007bff; /* Blue background color */
-    padding: 10px 0; /* Padding for spacing */
-    z-index: 1000; /* Ensures it stays on top of other content */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .dynamic-island {
@@ -53,25 +53,25 @@ nav {
 
 /* Container Styling */
 .container {
-    width: 90%; /* Increased width for better responsiveness */
+    width: 90%;
     max-width: 800px;
-    margin: 50px auto; /* Adjusted margin to center the container */
-    padding: 30px; /* Increased padding for a more spacious feel */
+    margin: 50px auto;
+    padding: 30px;
     background: #fff;
-    border-radius: 12px; /* Slightly larger border radius */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
-    padding-top: 80px; /* Adds space to offset the navbar height */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center-align text for better readability */
+    text-align: center;
 }
 
 /* Heading Styling */
 h1 {
     margin-bottom: 20px;
-    color: #333; /* Darker color for better readability */
+    color: #333;
 }
 
 /* About Sections Styling */
@@ -86,34 +86,53 @@ h1 {
 }
 
 .about-section p {
-    color: #555; /* Slightly lighter color for better contrast */
+    color: #555;
 }
 
 /* Team Section Styling */
 .team-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between team members */
+    gap: 20px;
     justify-content: center;
 }
 
 .team-member {
     text-align: center;
-    width: 150px; /* Fixed width for team member cards */
+    width: 150px;
 }
 
-.team-photo {
-    width: 100%; /* Full width for team photos */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Round photos */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    margin-bottom: 10px; /* Space below the photo */
+/* Image wrapper for team photos */
+.image-wrapper {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.team-photo,
+.styled-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    clip-path: polygon(30% 0%, 100% 20%, 80% 100%, 0% 80%);
+}
+
+.image-wrapper:hover .team-photo,
+.image-wrapper:hover .styled-image {
+    transform: scale(0.7);
 }
 
 .team-member h3 {
-    color: #333; /* Dark color for names */
-    font-size: 1.2em; /* Increase font size for names */
-    margin-bottom: 5px; /* Space below names */
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 5px;
 }
 
 /* Form Styling */
@@ -125,53 +144,53 @@ form {
 label {
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555; /* Slightly lighter color for labels */
+    color: #555;
 }
 
 input[type="text"] {
     margin-bottom: 15px;
-    padding: 12px; /* Increased padding for better usability */
+    padding: 12px;
     font-size: 16px;
-    border: 1px solid #ccc; /* Lighter border for inputs */
-    border-radius: 6px; /* Rounded corners */
-    transition: border-color 0.3s; /* Smooth transition for border color */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
 }
 
 input[type="text"]:focus {
-    border-color: #007bff; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+    border-color: #007bff;
+    outline: none;
 }
 
 /* Button Styling */
 button {
-    padding: 12px; /* Increased padding for buttons */
+    padding: 12px;
     font-size: 16px;
     color: #fff;
     background-color: #007bff;
     border: none;
-    border-radius: 6px; /* Rounded corners */
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slightly lift button on hover */
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 /* Link Styling */
 a {
     display: block;
-    margin-top: 10px; /* Increased margin for spacing */
+    margin-top: 10px;
     text-align: center;
     color: #007bff;
     text-decoration: none;
-    transition: color 0.3s; /* Smooth color transition */
+    transition: color 0.3s;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #0056b3; /* Darker color on hover */
+    color: #0056b3;
 }
 
 /* Styling for the button */
@@ -179,7 +198,7 @@ a:hover {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff; /* Adjust color as needed */
+    background-color: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -187,5 +206,5 @@ a:hover {
 }
 
 .cta-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }

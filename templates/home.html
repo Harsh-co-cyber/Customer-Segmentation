@@ -12,13 +12,28 @@
             <ul class="navbar">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="{{ url_for('predict') }}">Predict</a></li>
+                <li><a href="{{ url_for('predict') }}">Predict</a></li> <!-- Keep Predict link -->
             </ul>
         </div>
     </nav>
     <div class="container">
         <h1>Welcome to Customer Segmentation</h1>
-        <p>Please go to the <a class="cta-button" href="{{ url_for('predict') }}">Predict</a> page to make your predictions.</p>
+        <p>Customer segmentation is the process of dividing your customer base into distinct groups based on various characteristics, such as demographics, purchasing behavior, and preferences. This technique enables businesses to tailor their marketing strategies and services to meet the specific needs of each segment, ultimately enhancing customer satisfaction and loyalty.</p>
+
+        <h2>Why is it Important?</h2>
+        <p>Understanding your customers is key to driving sales and fostering loyalty. By identifying different segments, businesses can:</p>
+        <ul>
+            <li><strong>Personalize Marketing Efforts:</strong> Deliver targeted campaigns that resonate with specific customer groups.</li>
+            <li><strong>Enhance Customer Experience:</strong> Create services and products that cater to the unique needs of each segment.</li>
+            <li><strong>Optimize Resource Allocation:</strong> Focus resources on the most profitable segments, maximizing ROI.</li>
+        </ul>
+
+        <h2>How to Use Our Prediction Tool</h2>
+        <p>Our user-friendly prediction tool allows you to analyze your customer data and obtain valuable insights. Simply navigate to the <strong>Start Segmentation</strong> button below, upload your data, and let our model provide you with detailed segment analysis. With just a few clicks, you can unlock the potential of your customer data!</p>
+
+        <h2>Get Started!</h2>
+        <p>Join us on the journey to better customer understanding. Click the button below to begin your segmentation analysis:</p>
+        <a class="cta-button" href="{{ url_for('predict') }}">Start Segmentation</a>
     </div>
 </body>
 </html>
